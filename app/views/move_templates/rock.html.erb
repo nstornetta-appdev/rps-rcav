@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>You played rock!</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Neucha" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.2/css/all.css">
+</head>
+
+<body>
+  <table class="layout-container">
+    <tr class="layout-row">
+      <td colspan="2" class="layout-cell">
+        <a href="/rock" class="fancy-link fancy-link-active">
+          <i class="far fa-hand-rock fa-fw"></i>
+
+          Play Rock
+        </a>
+      </td>
+
+      <td colspan="2" class="layout-cell">
+        <a href="/paper" class="fancy-link">
+          <i class="far fa-hand-paper fa-fw"></i>
+
+          Play Paper
+        </a>
+      </td>
+
+      <td colspan="2" class="layout-cell">
+        <a href="/scissors" class="fancy-link">
+          <i class="far fa-hand-scissors fa-fw"></i>
+
+          Play Scissors
+        </a>
+      </td>
+    </tr>
+
+    <tr class="layout-row">
+      <td class="layout-cell" colspan="3">
+        <div class="panel border-win text-win centered-text">
+          <h2>We played rock!</h2>
+
+          <p>
+            <i class="far fa-hand-rock fa-10x"></i>
+          </p>
+        </div>
+      </td>
+
+      <td class="layout-cell" colspan="3">
+        <div class="panel border-lose text-lose centered-text">
+          <h2>They played <%=@computer_move%>!</h2>
+
+          <p>
+            <i class="far fa-hand-<%=@computer_move%> fa-10x"></i>
+          </p>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="layout-row">
+      <td class="layout-cell" colspan="6">
+        <div class="panel border-lose text-lose centered-text">
+          <h2>
+            We <%=@win_status%>!
+          </h2>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="layout-row">
+      <td class="layout-cell centered-text" colspan="6">
+        <a href="/">
+          Rules
+        </a>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

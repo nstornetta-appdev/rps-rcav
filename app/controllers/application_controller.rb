@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
-  # protect_from_forgery with: :exception
+  def index 
+    render("/index.html")
+  end
+  
   skip_before_action :verify_authenticity_token, raise: false
 end
